@@ -21,9 +21,6 @@ requirements:
     - python
     - django
     - djangorestframework
-test:
-  imports:
-    - rest_flex_fields
 
 about:
   home: "https://github.com/rsinger86/drf-flex-fields"
