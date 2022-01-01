@@ -1,0 +1,39 @@
+{% set name = "drf-flex-fields" %}
+{% set version = "0.9.6" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 07ef01a6c0b887de3cb97a673465de77ce7019cfd8c3e498ca7cd49ed03cf550
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+    - django
+    - djangorestframework
+test:
+  imports:
+    - rest_flex_fields
+
+about:
+  home: "https://github.com/rsinger86/drf-flex-fields"
+  license: MIT
+  license_family: MIT
+  license_file: 
+  summary: "Flexible, dynamic fields and nested resources for Django REST Framework serializers."
+  doc_url: https://github.com/rsinger86/drf-flex-fields
+  dev_url: https://github.com/rsinger86/drf-flex-fields
+
+extra:
+  recipe-maintainers:
+    - https://github.com/gb119/
